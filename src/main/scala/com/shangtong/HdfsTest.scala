@@ -4,7 +4,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object HdfsTest {
   def main(args: Array[String]): Unit = {
-
+    println("git add")
     val conf = new SparkConf()
     conf.set("spark.master", "local")
     conf.set("spark.app.name", "spark demo")
