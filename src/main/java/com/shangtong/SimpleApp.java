@@ -10,6 +10,7 @@ public class SimpleApp {
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> logData = sc.textFile(logFile).cache();
 
+        System.out.print("---------------");
         long numAs = logData.filter(new Function<String, Boolean>() {
             public Boolean call(String s) {
                 return s.contains("a");
